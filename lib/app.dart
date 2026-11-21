@@ -1,3 +1,4 @@
+
 import 'package:material_ui/material_ui.dart';
 
 import 'core/theme/app_theme.dart';
@@ -13,6 +14,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
+      themeMode: ThemeMode.system,
       home: const InicioPage(),
     );
   }
