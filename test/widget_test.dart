@@ -5,7 +5,16 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   testWidgets('la app arranca con el tema Material 3', (tester) async {
     await tester.pumpWidget(const App());
-    expect(find.text('Mantenimiento'), findsOneWidget);
-    expect(find.byType(FilledButton), findsNWidgets(2)); // filled y tonal
+
+    // Verifica que la aplicación utilice Material 3.
+    final materialApp = tester.widget<MaterialApp>(find.byType(MaterialApp));
+
+    expect(materialApp.theme?.useMaterial3, isTrue);
+
+    // Verifica que se abra la galería de componentes.
+    expect(find.text('Galería de diseño'), findsOneWidget);
+
+    // Verifica que aparezca la sección de botones.
+    expect(find.text('Átomos · Botón'), findsOneWidget);
   });
 }
