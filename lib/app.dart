@@ -1,8 +1,7 @@
-
 import 'package:material_ui/material_ui.dart';
 
 import 'core/theme/app_theme.dart';
-import 'ui/pages/galeria_page.dart';
+import 'ui/pages/dashboard_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -15,7 +14,7 @@ class App extends StatelessWidget {
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       themeMode: ThemeMode.system,
-      home: const GaleriaPage(),
+      home: const DashboardPage(),
     );
   }
 }
